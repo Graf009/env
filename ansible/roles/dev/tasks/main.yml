@@ -14,24 +14,24 @@
         - asimov
         - bat
         - bfg
-        - exa
         - dive
         - dog
-        - git
+        - exa
+        - fd
         - gh
+        - git
         - gnupg
         - hadolint
         - httpie
         - jsonlint
-        - fd
         - lima
         - mtr
         - nmap
         - pinentry-mac
         - pv
         - ripgrep
-        - sloccount
         - siege
+        - sloccount
         - telnet
         - yamllint
 
@@ -40,4 +40,3 @@
       name:
         - font-sauce-code-pro-nerd-font
         - ngrok
-        - postico

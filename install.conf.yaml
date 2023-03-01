@@ -1,32 +1,32 @@
 - defaults:
-		link:
-			relink: true
+    link:
+        relink: true
 
 - clean: ['~']
 
 
 - create:
-		- ~/.config
-		- ~/.config/fish
+    - ~/.config
+    - ~/.config/fish
 
 - link:
-		~/.config/fish/config.fish: fish/config.fish
-		~/.config/fish/graf009: fish/graf009
-		~/.config/omf: fish/omf
-		~/.config/gh: gh
-		~/.config/kitty: kitty
-		~/.gitconfig: .gitconfig
-		~/.gitconfig-podeli: .gitconfig-podeli
-		~/.gitconfig-public: .gitconfig-public
-		~/.editorconfig: .editorconfig
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/graf009: fish/graf009
+    ~/.config/omf: fish/omf
+    ~/.config/gh: gh
+    ~/.config/kitty: kitty
+    ~/.gitconfig: .gitconfig
+    ~/.gitconfig-podeli: .gitconfig-podeli
+    ~/.gitconfig-public: .gitconfig-public
+    ~/.editorconfig: .editorconfig
 
 - shell:
-	- [git submodule update --init --recursive, Installing submodules]
-	- mkdir -p ~/bin
-	- [./install-brew-stuff.sh, Installing homebew and essential utils]
-	- curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > /tmp/omf-install && chmod +x /tmp/omf-install
-	- fish /tmp/omf-install --noninteractive && rm /tmp/omf-install
-	- command: ./run-ansible.sh
-    stdin: true
-    stdout: true
-    description: Pouring software
+    - [git submodule update --init --recursive, Installing submodules]
+    - mkdir -p ~/bin
+    - [./install-brew-stuff.sh, Installing homebew and essential utils]
+    - curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > /tmp/omf-install && chmod +x /tmp/omf-install
+    - fish /tmp/omf-install --noninteractive && rm /tmp/omf-install
+    - command: ./run-ansible.sh
+      stdin: true
+      stdout: true
+      description: Pouring software

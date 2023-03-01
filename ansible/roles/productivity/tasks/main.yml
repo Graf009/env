@@ -8,6 +8,11 @@
         - vlc
         - yandex
 
+  - name: Ensure my accounting tools are installed
+    homebrew_cask:
+      name:
+        - ledger-live
+
   - name: Reduce macos noise
     osx_defaults:
       key: "{{ item.key }}"
