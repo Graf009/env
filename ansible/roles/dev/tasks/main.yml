@@ -1,0 +1,43 @@
+---
+  - name: Ensure kitty is installed
+    homebrew_cask:
+      name: kitty
+
+  - name: Add required homebrew repos
+    homebrew_tap:
+      name: homebrew/cask-fonts
+
+  - name: Ensure console utils are installed
+    homebrew:
+      name:
+        - ansible-lint
+        - asimov
+        - bat
+        - bfg
+        - exa
+        - dive
+        - dog
+        - git
+        - gh
+        - gnupg
+        - hadolint
+        - httpie
+        - jsonlint
+        - fd
+        - lima
+        - mtr
+        - nmap
+        - pinentry-mac
+        - pv
+        - ripgrep
+        - sloccount
+        - siege
+        - telnet
+        - yamllint
+
+  - name: Ensure graphical utils are installed
+    homebrew_cask:
+      name:
+        - font-sauce-code-pro-nerd-font
+        - ngrok
+        - postico
