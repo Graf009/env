@@ -43,3 +43,6 @@
     helper = osxkeychain
 [commit]
     gpgsign = true
+[user]
+	name = Oleg Orlov
+	email = o.orlov@podeli.ru
