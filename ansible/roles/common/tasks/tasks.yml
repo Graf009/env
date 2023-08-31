@@ -3,3 +3,10 @@
     homebrew:
       name: fish
       state: present
+
+  - name: Ensure shell soft
+    homebrew:
+      name:
+        - micro
+        - starship
+        - zsh

@@ -1,8 +1,4 @@
 ---
-  - name: Ensure kitty is installed
-    homebrew_cask:
-      name: kitty
-
   - name: Add required homebrew repos
     homebrew_tap:
       name: homebrew/cask-fonts
@@ -20,6 +16,7 @@
         - fd
         - gh
         - git
+        - git-delta
         - gnupg
         - hadolint
         - httpie
@@ -27,16 +24,24 @@
         - lima
         - mtr
         - nmap
+        - openssl
         - pinentry-mac
         - pv
         - ripgrep
         - siege
         - sloccount
+        - sqlite
         - telnet
         - yamllint
 
   - name: Ensure graphical utils are installed
     homebrew_cask:
       name:
+        - font-martian-mono
         - font-sauce-code-pro-nerd-font
         - ngrok
+
+  - name: Ensure node utils are installed
+    homebrew:
+      name:
+        - nodejs

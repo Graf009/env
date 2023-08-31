@@ -1,0 +1,163 @@
+{
+    "[css]": {
+      "editor.formatOnSave": false
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "editor.formatOnSave": true
+    },
+    "[svelte]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+      "editor.defaultFormatter": "svelte.svelte-vscode"
+    },
+    "[typescript]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.codeActionsOnSave": {
+        "source.fixAll": true
+      },
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "breadcrumbs.enabled": false,
+    "cSpell.language": "en,ru",
+    "cSpell.userWords": [
+      "browserslist",
+      "catched",
+      "CRDT",
+      "esbuild",
+      "globby",
+      "gzipped",
+      "pico",
+      "pnpm",
+      "Preact",
+      "preadd",
+      "sharec",
+      "slowreader",
+      "stylelint",
+      "subprotocol",
+      "unloadable",
+      "vite",
+      "Weblate"
+    ],
+    "css.validate": false,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": false
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.fontFamily": "Martian Mono",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 11,
+    "editor.fontWeight": "300",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "modifications",
+    "editor.gotoLocation.multipleDefinitions": "goto",
+    "editor.inlineSuggest.enabled": true,
+    "editor.lineHeight": 16,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "selection",
+    "editor.rulers": [
+      80
+    ],
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "eslint.migration.2_x": "off",
+    "eslint.probe": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
+      "html",
+      "vue",
+      "markdown",
+      "svelte"
+    ],
+    "eslint.run": "onSave",
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "svelte"
+    ],
+    "files.associations": {
+      "**/test/*.errors.ts": "rust",
+      "*.bu": "yaml",
+      "*.css": "postcss",
+      "*.desktop": "ini",
+      "*.ign": "json",
+      "*.service": "ini",
+      "*.timer": "ini",
+      ".huskyrc": "json",
+      ".lintstagedrc": "json",
+      ".posthtmlrc": "json",
+      ".stylelintrc": "json",
+      "errors.ts": "rust",
+      "errors.tsx": "rust"
+    },
+    "git.confirmSync": false,
+    "git.mergeEditor": true,
+    "github.copilot.enable": {
+      "*": true,
+      "markdown": false,
+      "plaintext": true,
+      "scminput": false
+    },
+    "less.validate": false,
+    "markdown.extension.italic.indicator": "_",
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.omittedFromToc": {
+      "README.md": [
+        "## Table of Contents"
+      ]
+    },
+    "markdown.extension.toc.unorderedList.marker": "*",
+    "markdown.extension.toc.updateOnSave": false,
+    "prettier.arrowParens": "avoid",
+    "prettier.quoteProps": "consistent",
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "none",
+    "projectManager.git.baseFolders": [
+      "/Users/orlovoleg/project/"
+    ],
+    "projectManager.git.maxDepthRecursion": 1,
+    "scss.validate": false,
+    "security.workspace.trust.untrustedFiles": "newWindow",
+    "stylelint.config": {
+      "run": "onSave"
+    },
+    "svelte.enable-ts-plugin": true,
+    "terminal.integrated.fontSize": 10,
+    "terminal.integrated.fontWeight": "300",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "window.commandCenter": true,
+    "window.menuBarVisibility": "toggle",
+    "window.titleBarStyle": "native",
+    "window.zoomLevel": 1,
+    "workbench.colorCustomizations": {
+      "editorRuler.foreground": "#151515"
+    },
+    "workbench.colorTheme": "GNOME dark",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": true
+  }
