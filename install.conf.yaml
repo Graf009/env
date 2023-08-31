@@ -7,11 +7,14 @@
 
 - create:
     - ~/.config
+    - ~/.config/bat
+    - ~/.config/Code/User
     - ~/.config/fish
+    - ~/.config/git/
 
 - link:
-     ~/.config/Code/User/settings.json2: vscode.json
-     ~/.zshrc: zshrc
+    ~/.config/Code/User/settings.json2: vscode.json
+    ~/.zshrc: zshrc
     ~/.config/bat/config: batconfig
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/graf009: fish/graf009
