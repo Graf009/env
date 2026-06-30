@@ -1,1 +1,6 @@
 .pnpm-*.log
+
+# omc operational state — not for source control
+.omc/state/
+.omc/sessions/
+.omc/project-memory.json
