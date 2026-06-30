@@ -13,30 +13,22 @@
     - ~/.config/git/
 
 - link:
-    ~/.config/Code/User/settings.json2: vscode.json
-    ~/.zshrc: zshrc
+    ~/.config/Code/User/settings.json: vscode.json
     ~/.config/bat/config: batconfig
     ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/conf.d: fish/conf.d
     ~/.config/fish/graf009: fish/graf009
     ~/.config/gh: gh
     ~/.config/git/ignore: gitignore
     ~/.config/kitty: kitty
-    ~/.config/omf: fish/omf
     ~/.config/starship.toml: starship.toml
     ~/.editorconfig: editorconfig
     ~/.gitconfig-podeli: gitconfig-podeli
     ~/.gitconfig-public: gitconfig-public
     ~/.gitconfig: gitconfig
-    ~/.ripgreprc: ripgreprc
+    ~/.config/ripgreprc: ripgreprc
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - mkdir -p ~/bin
-    - [./install-brew-stuff.sh, Installing homebew and essential utils]
-    - command: ./run-ansible.sh
-      stdin: true
-      stdout: true
-      description: Pouring software
-    - curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install > /tmp/omf-install && chmod +x /tmp/omf-install
-    - fish /tmp/omf-install --noninteractive && rm /tmp/omf-install
-    - [./install-zsh-stuff.sh, Installing zsh stuff]
+    - [./install-brew-stuff.sh, Installing homebrew and essential utils]
