@@ -14,4 +14,4 @@ for f in (find ~/.config/fish/graf009/ -type f  -name '*.fish')
 	source $f
 end
 
-fish_add_path /opt/homebrew/opt/node@18/bin
+# node runtime managed by mise — activated in Phase 3
