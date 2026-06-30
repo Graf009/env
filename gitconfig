@@ -1,48 +1,64 @@
-# podeli
+# identity — loaded by gitdir match; podeli is also the fallback
 [includeIf "gitdir:~/project/podeli/"]
-      path = .gitconfig-podeli
-
-# public
+    path = .gitconfig-podeli
 [includeIf "gitdir:~/project/public/"]
-      path = .gitconfig-public
+    path = .gitconfig-public
 [includeIf "gitdir:~/project/tmp/"]
-      path = .gitconfig-public
+    path = .gitconfig-public
 
+[user]
+    name = Oleg Orlov
+    email = o.orlov@podeli.ru
+    signingkey = ~/.ssh/id_dc
 
 [core]
     autocrlf = input
-[alias]
-    l   = log --oneline --graph --decorate
-    st  = status
-    br  = branch
-    c   = checkout
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
+    editor   = micro
+    pager    = delta
+
+[init]
+    defaultBranch = main
+
+[branch]
+    autosetuprebase = always
+
 [push]
     default = current
-[pager]
-    show = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight |less
-    diff = /opt/homebrew/share/git-core/contrib/diff-highlight/diff-highlight |less
-[filter "lfs"]
-    process = git-lfs filter-process
-    required = true
-    clean = git-lfs clean -- %f
-    smudge = git-lfs smudge -- %f
-[credential]
-    helper = osxkeychain
+
 [commit]
     gpgsign = true
-[user]
-	name = Oleg Orlov
-	email = o.orlov@podeli.ru
+
+[gpg]
+    format = ssh
+
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
+
+[alias]
+    current-branch = "!git branch 2>/dev/null | sed -e '/^[^*]/d' -e 's/* \\(.*\\)/\\1/'"
+    a  = "!git add . && git s"
+    s  = status --short --branch
+    d  = diff
+    c  = commit -m
+    ac = commit -am
+    ch = checkout
+    l  = "!git pull origin $(git current-branch) --rebase"
+    h  = "!git push origin $(git current-branch)"
+    lh = "!git l && git h"
+    r  = "!git rm $(git ls-files --deleted) && git status"
+    lg = log --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit
+    tree = log --oneline --graph --decorate
+
+[color]
+    diff   = auto
+    status = auto
+    branch = auto
+
+[credential]
+    helper = osxkeychain
+
+[filter "lfs"]
+    process  = git-lfs filter-process
+    required = true
+    clean    = git-lfs clean -- %f
+    smudge   = git-lfs smudge -- %f

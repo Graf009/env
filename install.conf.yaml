@@ -22,6 +22,7 @@
     ~/.config/fish/graf009: fish/graf009
     ~/.config/gh: gh
     ~/.config/git/ignore: gitignore
+    ~/.config/git/allowed_signers: git/allowed_signers
     ~/.config/kitty: kitty
     ~/.config/starship.toml: starship.toml
     ~/.editorconfig: editorconfig

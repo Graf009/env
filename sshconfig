@@ -3,12 +3,12 @@ Host *
     AddKeysToAgent yes
     ServerAliveInterval 3
     GSSAPIAuthentication no
-    IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_orlov
 
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/id_ed25519
+    IdentityFile ~/.ssh/id_orlov
 
 Host 127.0.0.1
     StrictHostKeyChecking no
