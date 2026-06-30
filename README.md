@@ -109,26 +109,66 @@ yc completion fish > ~/.config/local/yandex.fish
 
 ```bash
 EXTENSIONS=(
-  alefragnani.project-manager
-  christian-kohler.npm-intellisense
-  christian-kohler.path-intellisense
-  csstools.postcss
-  dbaeumer.vscode-eslint
-  EditorConfig.EditorConfig
-  esbenp.prettier-vscode
-  formulahendry.auto-rename-tag
-  mikestead.dotenv
+  # AI
+  anthropic.claude-code
+
+  # Git
+  eamodio.gitlens
+
+  # Languages
+  golang.go
+  ms-python.python
+  ms-python.debugpy
+  ms-python.vscode-pylance
+  ms-python.vscode-python-envs
+  svelte.svelte-vscode
+
+  # Infrastructure / DevOps
+  redhat.ansible
+  redhat.vscode-yaml
+  hashicorp.hcl
+  docker.docker
   ms-azuretools.vscode-docker
-  MS-CEINTL.vscode-language-pack-ru
-  PKief.material-icon-theme
+  ms-azuretools.vscode-containers
+
+  # Formatters / Linters
+  esbenp.prettier-vscode
+  dbaeumer.vscode-eslint
+  stylelint.vscode-stylelint
+  davidanson.vscode-markdownlint
+
+  # Data formats
+  tamasfe.even-better-toml
+  csstools.postcss
+  jock.svg
+  mechatroner.rainbow-csv
+  inferrinizzard.prettier-sql-vscode
+  xyz.plsql-language
+  mariusschulz.yarn-lock-syntax
+  webben.browserslist
+
+  # Editor UX
+  editorconfig.editorconfig
+  mikestead.dotenv
+  kshetline.ligatures-limited
+  ms-vscode.live-server
+
+  # Markdown
+  yzhang.markdown-all-in-one
+
+  # Spell check
   streetsidesoftware.code-spell-checker
   streetsidesoftware.code-spell-checker-russian
-  stylelint.vscode-stylelint
-  svelte.svelte-vscode
-  VisualStudioExptTeam.vscodeintellicode
-  yzhang.markdown-all-in-one
+
+  # Theme / Icons
+  rafaelmardojai.vscode-gnome-theme
+  pkief.material-icon-theme
+
+  # Localisation
+  ms-ceintl.vscode-language-pack-ru
 )
 for EXTENSION in "${EXTENSIONS[@]}"; do
+  [[ "$EXTENSION" =~ ^# ]] && continue
   code --install-extension "$EXTENSION"
 done
 ```

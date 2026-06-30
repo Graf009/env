@@ -1,67 +1,118 @@
 {
     "[css]": {
-      "editor.formatOnSave": false
+        "editor.formatOnSave": false
     },
     "[html]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascript]": {
-      "editor.codeActionsOnSave": {
-        "source.fixAll": true
-      },
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
+        "editor.defaultFormatter": "vscode.json-language-features",
+        "editor.formatOnSave": true
     },
     "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode",
-      "editor.formatOnSave": true
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
     },
     "[svelte]": {
-      "editor.codeActionsOnSave": {
-        "source.fixAll": true
-      },
-      "editor.defaultFormatter": "svelte.svelte-vscode"
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.defaultFormatter": "svelte.svelte-vscode"
     },
     "[typescript]": {
-      "editor.codeActionsOnSave": {
-        "source.fixAll": true
-      },
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescriptreact]": {
-      "editor.codeActionsOnSave": {
-        "source.fixAll": true
-      },
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "breadcrumbs.enabled": false,
+    "chat.mcp.gallery.enabled": true,
+    "chat.viewSessions.orientation": "stacked",
+    "claudeCode.preferredLocation": "panel",
     "cSpell.language": "en,ru",
     "cSpell.userWords": [
-      "browserslist",
-      "catched",
-      "CRDT",
-      "esbuild",
-      "globby",
-      "gzipped",
-      "pico",
-      "pnpm",
-      "Preact",
-      "preadd",
-      "sharec",
-      "slowreader",
-      "stylelint",
-      "subprotocol",
-      "unloadable",
-      "vite",
-      "Weblate"
+        "algif",
+        "anycast",
+        "autoxray",
+        "bantime",
+        "blockinfile",
+        "bookworm",
+        "bpf",
+        "browserslist",
+        "catched",
+        "chrony",
+        "chronyc",
+        "CRDT",
+        "dmesg",
+        "duckdns",
+        "esbuild",
+        "fail2ban",
+        "findtime",
+        "FQCN",
+        "FQDN",
+        "globby",
+        "graf",
+        "gzipped",
+        "hudochenkov",
+        "iburst",
+        "ignoreip",
+        "insertafter",
+        "journalctl",
+        "journald",
+        "kbdinteractive",
+        "kernelhints",
+        "kexec",
+        "kptr",
+        "lineinfile",
+        "maxretry",
+        "maxsources",
+        "modprobe",
+        "needrestart",
+        "noqa",
+        "nrconf",
+        "oneshot",
+        "orlov",
+        "pico",
+        "pnpm",
+        "Preact",
+        "preadd",
+        "QUIC",
+        "rfc",
+        "sharec",
+        "slowreader",
+        "sshd",
+        "sshpass",
+        "stylelint",
+        "subprotocol",
+        "syncookies",
+        "sysctl",
+        "ufw",
+        "unloadable",
+        "vite",
+        "VLESS",
+        "Weblate",
+        "wireguard",
+        "XHTTP",
+        "xray",
+        "XTLS"
     ],
     "css.validate": false,
+    "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
     "editor.codeActionsOnSave": {
-      "source.fixAll": false
+        "source.fixAll": false
     },
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.fontFamily": "Martian Mono",
@@ -75,59 +126,59 @@
     "editor.lineHeight": 16,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "selection",
-    "editor.rulers": [
-      80
-    ],
+    "editor.rulers": [80],
     "editor.suggestSelection": "first",
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "eslint.migration.2_x": "off",
     "eslint.probe": [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "html",
-      "vue",
-      "markdown",
-      "svelte"
+        "javascript",
+        "javascriptreact",
+        "typescript",
+        "typescriptreact",
+        "html",
+        "vue",
+        "markdown",
+        "svelte"
     ],
     "eslint.run": "onSave",
     "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "svelte"
+        "javascript",
+        "javascriptreact",
+        "svelte"
     ],
+    "explorer.confirmDelete": false,
     "files.associations": {
-      "**/test/*.errors.ts": "rust",
-      "*.bu": "yaml",
-      "*.css": "postcss",
-      "*.desktop": "ini",
-      "*.ign": "json",
-      "*.service": "ini",
-      "*.timer": "ini",
-      ".huskyrc": "json",
-      ".lintstagedrc": "json",
-      ".posthtmlrc": "json",
-      ".stylelintrc": "json",
-      "errors.ts": "rust",
-      "errors.tsx": "rust"
+        "**/test/*.errors.ts": "rust",
+        "*.bu": "yaml",
+        "*.css": "postcss",
+        "*.desktop": "ini",
+        "*.ign": "json",
+        "*.service": "ini",
+        "*.timer": "ini",
+        ".huskyrc": "json",
+        ".lintstagedrc": "json",
+        ".posthtmlrc": "json",
+        ".stylelintrc": "json",
+        "errors.ts": "rust",
+        "errors.tsx": "rust"
     },
     "git.confirmSync": false,
     "git.mergeEditor": true,
-    "github.copilot.enable": {
-      "*": true,
-      "markdown": false,
-      "plaintext": true,
-      "scminput": false
-    },
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "gitlens.autolinks": [
+        {
+            "prefix": "DEVELOPMENT",
+            "url": "https://tracker.yandex.ru/DEVELOPMENT-<num>"
+        }
+    ],
+    "gitlens.codeLens.enabled": false,
     "less.validate": false,
     "markdown.extension.italic.indicator": "_",
     "markdown.extension.toc.levels": "2..6",
     "markdown.extension.toc.omittedFromToc": {
-      "README.md": [
-        "## Table of Contents"
-      ]
+        "README.md": ["## Table of Contents"]
     },
     "markdown.extension.toc.unorderedList.marker": "*",
     "markdown.extension.toc.updateOnSave": false,
@@ -136,28 +187,31 @@
     "prettier.semi": false,
     "prettier.singleQuote": true,
     "prettier.trailingComma": "none",
-    "projectManager.git.baseFolders": [
-      "/Users/orlovoleg/project/"
-    ],
+    "projectManager.git.baseFolders": ["/Users/orlovoleg/project/"],
     "projectManager.git.maxDepthRecursion": 1,
+    "redhat.telemetry.enabled": false,
     "scss.validate": false,
     "security.workspace.trust.untrustedFiles": "newWindow",
     "stylelint.config": {
-      "run": "onSave"
+        "run": "onSave"
     },
     "svelte.enable-ts-plugin": true,
+    "terminal.external.osxExec": "Kitty.app",
+    "terminal.explorerKind": "external",
     "terminal.integrated.fontSize": 10,
     "terminal.integrated.fontWeight": "300",
+    "terminal.integrated.mouseWheelScrollSensitivity": 3,
     "typescript.tsdk": "node_modules/typescript/lib",
     "window.commandCenter": true,
     "window.menuBarVisibility": "toggle",
     "window.titleBarStyle": "native",
     "window.zoomLevel": 1,
     "workbench.colorCustomizations": {
-      "editorRuler.foreground": "#151515"
+        "editorRuler.foreground": "#151515"
     },
     "workbench.colorTheme": "GNOME dark",
+    "workbench.editor.empty.hint": "hidden",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.statusBar.visible": true
-  }
+}

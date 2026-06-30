@@ -503,6 +503,23 @@ openssl s_client -connect github.com:443   # проверить TLS сертиф
 **Редактор кода Microsoft.**
 Основная IDE: LSP, отладчик, расширения для Go, TypeScript, Helm, Terraform, Docker. Конфиг в `vscode.json`.
 
+**Ключевые расширения:**
+
+| Расширение | Назначение |
+|---|---|
+| `eamodio.gitlens` | Git supercharged — blame, история, autolinks в Yandex Tracker |
+| `golang.go` | Go LSP, отладка, тесты, форматирование |
+| `ms-python.python` | Python LSP, отладка, окружения |
+| `redhat.ansible` | Ansible playbooks — синтаксис, линтинг, автодополнение |
+| `redhat.vscode-yaml` | YAML с JSON Schema валидацией (k8s, Helm) |
+| `hashicorp.hcl` | HCL синтаксис для Terraform |
+| `docker.docker` | Docker: контейнеры, образы, compose прямо из VS Code |
+| `tamasfe.even-better-toml` | TOML с валидацией (Cargo.toml, mise, starship) |
+| `esbenp.prettier-vscode` | Форматирование JS/TS/CSS/JSON |
+| `dbaeumer.vscode-eslint` | ESLint в реальном времени |
+| `stylelint.vscode-stylelint` | CSS/PostCSS линтинг |
+| `anthropic.claude-code` | Claude Code в боковой панели VS Code |
+
 ### Claude Code (`claude`)
 **AI-ассистент для разработки от Anthropic.**
 CLI + IDE-расширение: редактирование кода, рефакторинг, отладка, работа с git, запуск тестов. Настройки в `claude/settings.json`, плагины в `claude/plugins.md`.

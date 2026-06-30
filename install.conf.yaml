@@ -8,7 +8,7 @@
 - create:
     - ~/.config
     - ~/.config/bat
-    - ~/.config/Code/User
+    - ~/Library/Application Support/Code/User
     - ~/.config/fish
     - ~/.config/git/
     - ~/.config/pnpm
@@ -16,7 +16,7 @@
     - ~/.claude
 
 - link:
-    ~/.config/Code/User/settings.json: vscode.json
+    ~/Library/Application Support/Code/User/settings.json: vscode.json
     ~/.config/bat/config: batconfig
     ~/.config/fish/config.fish: fish/config.fish
     ~/.config/fish/conf.d: fish/conf.d
