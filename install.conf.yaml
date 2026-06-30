@@ -31,4 +31,6 @@
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - mkdir -p ~/bin
-    - [./install-brew-stuff.sh, Installing homebrew and essential utils]
+    - [./install-brew-stuff.sh, Installing Homebrew]
+    - [brew bundle install, Installing packages from Brewfile]
+    - [./macos-defaults.sh, Applying macOS defaults]
