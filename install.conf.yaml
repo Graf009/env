@@ -13,6 +13,7 @@
     - ~/.config/git/
     - ~/.config/pnpm
     - ~/.config/mise
+    - ~/.claude
 
 - link:
     ~/.config/Code/User/settings.json: vscode.json
@@ -34,6 +35,7 @@
     ~/.config/pnpm/config.yaml: pnpm/config.yaml
     ~/.config/mise/config.toml: mise/config.toml
     ~/.config/fish/functions: fish/functions
+    ~/.claude/settings.json: claude/settings.json
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

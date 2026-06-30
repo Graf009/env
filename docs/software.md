@@ -503,6 +503,26 @@ openssl s_client -connect github.com:443   # проверить TLS сертиф
 **Редактор кода Microsoft.**
 Основная IDE: LSP, отладчик, расширения для Go, TypeScript, Helm, Terraform, Docker. Конфиг в `vscode.json`.
 
+### Claude Code (`claude`)
+**AI-ассистент для разработки от Anthropic.**
+CLI + IDE-расширение: редактирование кода, рефакторинг, отладка, работа с git, запуск тестов. Настройки в `claude/settings.json`, плагины в `claude/plugins.md`.
+
+```bash
+# после ./install настройки уже подключены через symlink
+claude                         # запустить в текущей директории
+
+# установить плагины (один раз на новой машине)
+/install-plugin oh-my-claudecode
+setup omc                      # инициализировать oh-my-claudecode
+```
+
+**Что хранится в dotfiles:**
+
+| Файл | Назначение |
+|---|---|
+| `claude/settings.json` | Тема, плагины, statusLine, effortLevel, env |
+| `claude/plugins.md` | Список плагинов и инструкция по установке |
+
 ---
 
 ## Infra GUI

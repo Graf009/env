@@ -79,6 +79,24 @@ bw-ssh                     # decrypts each key, ssh-add, wipes temp file
 
 A template for `~/.fish.env` is at `.fish.env.example` in this repo.
 
+### Claude Code
+
+Settings are symlinked from `claude/settings.json` → `~/.claude/settings.json` automatically by `./install`.
+
+Install plugins on first run (see `claude/plugins.md` for full list):
+
+```
+/install-plugin oh-my-claudecode   # from omc marketplace
+/install-plugin claude-code-setup
+/install-plugin claude-md-management
+```
+
+Then initialise oh-my-claudecode:
+
+```
+setup omc
+```
+
 ### Yandex Cloud completion
 
 After `yc init`, save the completion file outside the repo:
@@ -130,6 +148,8 @@ done
 | `sshconfig` | SSH client config |
 | `starship.toml` | Prompt config |
 | `macos-defaults.sh` | Idempotent macOS defaults |
+| `claude/settings.json` | Claude Code settings (theme, plugins, effortLevel) |
+| `claude/plugins.md` | Plugins to install on a new machine |
 | `fish/functions/bw-ssh.fish` | Load SSH keys from Bitwarden into ssh-agent |
 | `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
 | `.fish.env.example` | Template for `~/.fish.env` (fill in and place at `~/`) |
