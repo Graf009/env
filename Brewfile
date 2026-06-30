@@ -93,6 +93,7 @@ cask "vlc"
 
 # --- security / privacy ---
 cask "bitwarden"      # fallback; prefer App Store version (mas below)
+brew "bitwarden-cli"  # CLI для secrets management (bw-ssh, bw-env)
 cask "cryptomator"
 
 # --- IoT / infra ---

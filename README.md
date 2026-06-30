@@ -45,10 +45,39 @@ chmod 600 ~/.ssh/id_orlov ~/.ssh/id_dc ~/.ssh/id_podeli-bnpl
 chmod 644 ~/.ssh/*.pub
 ```
 
-### Private env vars
+### Secrets management
 
-Create `~/.fish.env` with `KEY=value` pairs (one per line) for secrets that
-should not live in source control.
+Secrets (tokens, API keys, SSH private keys) are stored in **Bitwarden** and
+pulled into the local machine on demand — nothing sensitive lives in this repo.
+
+**First-time setup:**
+
+```bash
+bw login                   # authenticate once
+```
+
+**Load env vars** from a Bitwarden Secure Note named `fish.env`:
+
+```fish
+bw-env                     # pulls KEY=value pairs → ~/.fish.env, then exports
+```
+
+**Load SSH keys** into `ssh-agent` from Secure Notes named `SSH key: id_orlov` etc.:
+
+```fish
+bw-ssh                     # decrypts each key, ssh-add, wipes temp file
+```
+
+**Vault conventions:**
+
+| Bitwarden item name | Type | Content |
+|---|---|---|
+| `fish.env` | Secure Note | `KEY=value` lines (one per line) |
+| `SSH key: id_orlov` | Secure Note | Private key file content |
+| `SSH key: id_dc` | Secure Note | Private key file content |
+| `SSH key: id_podeli-bnpl` | Secure Note | Private key file content |
+
+A template for `~/.fish.env` is at `.fish.env.example` in this repo.
 
 ### Yandex Cloud completion
 
@@ -101,3 +130,6 @@ done
 | `sshconfig` | SSH client config |
 | `starship.toml` | Prompt config |
 | `macos-defaults.sh` | Idempotent macOS defaults |
+| `fish/functions/bw-ssh.fish` | Load SSH keys from Bitwarden into ssh-agent |
+| `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
+| `.fish.env.example` | Template for `~/.fish.env` (fill in and place at `~/`) |
