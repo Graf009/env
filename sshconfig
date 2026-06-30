@@ -1,0 +1,15 @@
+Host *
+    ForwardAgent no
+    AddKeysToAgent yes
+    ServerAliveInterval 3
+    GSSAPIAuthentication no
+    IdentityFile ~/.ssh/id_ed25519
+
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+
+Host 127.0.0.1
+    StrictHostKeyChecking no
+    UserKnownHostsFile /dev/null

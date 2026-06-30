@@ -1,0 +1,295 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1782764695789,
+  "projectRoot": "/Users/orlovoleg/project/public/dotfiles",
+  "techStack": {
+    "languages": [],
+    "frameworks": [],
+    "packageManager": null,
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": null,
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": null,
+    "scripts": {}
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "ansible": {
+      "path": "ansible",
+      "purpose": null,
+      "fileCount": 4,
+      "lastAccessed": 1782764695781,
+      "keyFiles": [
+        "ansible.cfg",
+        "requirements.yml",
+        "site.yml"
+      ]
+    },
+    "dotbot": {
+      "path": "dotbot",
+      "purpose": null,
+      "fileCount": 12,
+      "lastAccessed": 1782764695781,
+      "keyFiles": [
+        "CHANGELOG.md",
+        "CONTRIBUTING.md",
+        "LICENSE.md",
+        "README.md",
+        "pyproject.toml"
+      ]
+    },
+    "fish": {
+      "path": "fish",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1782764695781,
+      "keyFiles": [
+        "config.fish"
+      ]
+    },
+    "gh": {
+      "path": "gh",
+      "purpose": null,
+      "fileCount": 1,
+      "lastAccessed": 1782764695781,
+      "keyFiles": [
+        "config.yml"
+      ]
+    },
+    "kitty": {
+      "path": "kitty",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1782764695782,
+      "keyFiles": [
+        "OneDark.conf",
+        "kitty.conf"
+      ]
+    },
+    "dotbot/bin": {
+      "path": "dotbot/bin",
+      "purpose": "Executable scripts",
+      "fileCount": 1,
+      "lastAccessed": 1782764695782,
+      "keyFiles": [
+        "dotbot"
+      ]
+    }
+  },
+  "hotPaths": [
+    {
+      "path": "install.conf.yaml",
+      "accessCount": 10,
+      "lastAccessed": 1782804675431,
+      "type": "file"
+    },
+    {
+      "path": "fish/config.fish",
+      "accessCount": 8,
+      "lastAccessed": 1782804653883,
+      "type": "file"
+    },
+    {
+      "path": "zshrc",
+      "accessCount": 4,
+      "lastAccessed": 1782804356125,
+      "type": "file"
+    },
+    {
+      "path": "install-brew-stuff.sh",
+      "accessCount": 4,
+      "lastAccessed": 1782804492710,
+      "type": "file"
+    },
+    {
+      "path": "gitconfig",
+      "accessCount": 3,
+      "lastAccessed": 1782768071869,
+      "type": "file"
+    },
+    {
+      "path": "gitconfigV2",
+      "accessCount": 3,
+      "lastAccessed": 1782768072258,
+      "type": "file"
+    },
+    {
+      "path": "gitconfig-podeli",
+      "accessCount": 3,
+      "lastAccessed": 1782768072810,
+      "type": "file"
+    },
+    {
+      "path": "gitconfig-public",
+      "accessCount": 3,
+      "lastAccessed": 1782768073316,
+      "type": "file"
+    },
+    {
+      "path": "starship.toml",
+      "accessCount": 3,
+      "lastAccessed": 1782804654605,
+      "type": "file"
+    },
+    {
+      "path": "install-zsh-stuff.sh",
+      "accessCount": 2,
+      "lastAccessed": 1782767848533,
+      "type": "file"
+    },
+    {
+      "path": "fish/graf009/eza.fish",
+      "accessCount": 2,
+      "lastAccessed": 1782804509825,
+      "type": "file"
+    },
+    {
+      "path": "fish/graf009/dog.fish",
+      "accessCount": 2,
+      "lastAccessed": 1782804663347,
+      "type": "file"
+    },
+    {
+      "path": "ansible/site.yml",
+      "accessCount": 1,
+      "lastAccessed": 1782766692424,
+      "type": "file"
+    },
+    {
+      "path": "fish/graf009/exa.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782766697802,
+      "type": "file"
+    },
+    {
+      "path": "gh/config.yml",
+      "accessCount": 1,
+      "lastAccessed": 1782766697938,
+      "type": "file"
+    },
+    {
+      "path": "fish/graf009/fish_prompt.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782766703529,
+      "type": "file"
+    },
+    {
+      "path": "kitty/kitty.conf",
+      "accessCount": 1,
+      "lastAccessed": 1782766703760,
+      "type": "file"
+    },
+    {
+      "path": "ansible/roles/productivity/tasks/main.yml",
+      "accessCount": 1,
+      "lastAccessed": 1782766713243,
+      "type": "file"
+    },
+    {
+      "path": "fish/omf/bundle",
+      "accessCount": 1,
+      "lastAccessed": 1782766738850,
+      "type": "file"
+    },
+    {
+      "path": "fish/graf009/gpg.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782766739291,
+      "type": "file"
+    },
+    {
+      "path": "run-ansible.sh",
+      "accessCount": 1,
+      "lastAccessed": 1782766761048,
+      "type": "file"
+    },
+    {
+      "path": "batconfig",
+      "accessCount": 1,
+      "lastAccessed": 1782766761532,
+      "type": "file"
+    },
+    {
+      "path": "fish/graf009/ssh.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782766761763,
+      "type": "file"
+    },
+    {
+      "path": "fish/conf.d/env.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782804400252,
+      "type": "file"
+    },
+    {
+      "path": "fish/conf.d/aliases.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782804403900,
+      "type": "file"
+    },
+    {
+      "path": "ripgreprc",
+      "accessCount": 1,
+      "lastAccessed": 1782804479372,
+      "type": "file"
+    },
+    {
+      "path": "Brewfile",
+      "accessCount": 1,
+      "lastAccessed": 1782804550431,
+      "type": "file"
+    },
+    {
+      "path": "macos-defaults.sh",
+      "accessCount": 1,
+      "lastAccessed": 1782804552419,
+      "type": "file"
+    },
+    {
+      "path": "fish/fish_plugins",
+      "accessCount": 1,
+      "lastAccessed": 1782804638215,
+      "type": "file"
+    },
+    {
+      "path": "fish/functions/release.fish",
+      "accessCount": 1,
+      "lastAccessed": 1782804640191,
+      "type": "file"
+    },
+    {
+      "path": "sshconfig",
+      "accessCount": 1,
+      "lastAccessed": 1782804641589,
+      "type": "file"
+    },
+    {
+      "path": "pnpm/config.yaml",
+      "accessCount": 1,
+      "lastAccessed": 1782804643266,
+      "type": "file"
+    },
+    {
+      "path": "mise/config.toml",
+      "accessCount": 1,
+      "lastAccessed": 1782804643946,
+      "type": "file"
+    }
+  ],
+  "userDirectives": []
+}

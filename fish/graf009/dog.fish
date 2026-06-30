@@ -1,3 +1,3 @@
-function dig --description 'alias dig=dog'
-	dog $argv;
+function dig --description 'alias dig=doggo'
+	doggo $argv;
 end

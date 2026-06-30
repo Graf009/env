@@ -13,5 +13,6 @@ $cmd_duration\
 $line_break\
 $jobs\
 $status\
+$container\
 $shell\
 $character"""

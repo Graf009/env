@@ -14,4 +14,17 @@ for f in (find ~/.config/fish/graf009/ -type f  -name '*.fish')
 	source $f
 end
 
-# node runtime managed by mise — activated in Phase 3
+# runtime manager (must be in config.fish — conf.d loads before this)
+mise activate fish | source
+
+# prompt
+starship init fish | source
+
+# shell history
+atuin init fish | source
+
+# smart cd
+zoxide init fish | source
+
+# fuzzy finder
+fzf --fish | source

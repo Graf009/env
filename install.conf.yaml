@@ -11,6 +11,8 @@
     - ~/.config/Code/User
     - ~/.config/fish
     - ~/.config/git/
+    - ~/.config/pnpm
+    - ~/.config/mise
 
 - link:
     ~/.config/Code/User/settings.json: vscode.json
@@ -27,6 +29,10 @@
     ~/.gitconfig-public: gitconfig-public
     ~/.gitconfig: gitconfig
     ~/.config/ripgreprc: ripgreprc
+    ~/.ssh/config: sshconfig
+    ~/.config/pnpm/config.yaml: pnpm/config.yaml
+    ~/.config/mise/config.toml: mise/config.toml
+    ~/.config/fish/functions: fish/functions
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
@@ -34,3 +40,5 @@
     - [./install-brew-stuff.sh, Installing Homebrew]
     - [brew bundle install, Installing packages from Brewfile]
     - [./macos-defaults.sh, Applying macOS defaults]
+    - [fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update', Installing fisher plugins]
+    - [fish -c 'mise install', Installing mise runtimes]
