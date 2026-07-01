@@ -190,7 +190,8 @@ done
 | `macos-defaults.sh` | Idempotent macOS defaults |
 | `claude/settings.json` | Claude Code settings (theme, plugins, effortLevel) |
 | `claude/plugins.md` | Plugins to install on a new machine |
-| `bin/vvv` | Read-only macOS diagnostics: device management (MDM), background services, privacy permissions, network connections. Symlinked to `~/bin/vvv`. Run `vvv`, `vvv -v`, `vvv --full` |
+| `bin/` | Personal scripts on `PATH`. The whole folder is symlinked to `~/bin`, so **any executable dropped here becomes a command** — no `install.conf.yaml` edit needed |
+| `bin/vvv` | Read-only macOS diagnostics: device management (MDM), background services, privacy permissions, network connections. Run `vvv`, `vvv -v`, `vvv --full` |
 | `fish/functions/bw-ssh.fish` | Load SSH keys from Bitwarden into ssh-agent |
 | `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
 | `.fish.env.example` | Template for `~/.fish.env` (fill in and place at `~/`) |

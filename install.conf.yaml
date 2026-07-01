@@ -6,7 +6,6 @@
 
 
 - create:
-    - ~/bin
     - ~/.config
     - ~/.config/bat
     - ~/Library/Application Support/Code/User
@@ -37,11 +36,10 @@
     ~/.config/mise/config.toml: mise/config.toml
     ~/.config/fish/functions: fish/functions
     ~/.claude/settings.json: claude/settings.json
-    ~/bin/vvv: bin/vvv
+    ~/bin: bin
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - mkdir -p ~/bin
     - [./install-brew-stuff.sh, Installing Homebrew]
     - [brew bundle install, Installing packages from Brewfile]
     - [./macos-defaults.sh, Applying macOS defaults]
