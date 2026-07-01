@@ -41,6 +41,7 @@ brew "k9s"
 brew "kubectx"        # provides kubectx + kubens
 brew "stern"          # multi-pod log tailing
 brew "hashicorp/tap/terraform"   # IaC for Yandex Cloud and others
+brew "ansible"        # configuration management / automation
 brew "ansible-lint"   # Ansible linter (work requirement)
 brew "asimov"         # exclude node_modules/.git from Time Machine
 
