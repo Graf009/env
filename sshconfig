@@ -3,12 +3,19 @@ Host *
     AddKeysToAgent yes
     ServerAliveInterval 3
     GSSAPIAuthentication no
+    TCPKeepAlive yes
     IdentityFile ~/.ssh/id_orlov
 
 Host github.com
     HostName github.com
     User git
     IdentityFile ~/.ssh/id_orlov
+    IdentitiesOnly yes
+
+Host *.podeli.ru *.core-infra.ru
+    User oleg_orlov
+    IdentityFile ~/.ssh/id_podeli
+    IdentitiesOnly yes
 
 Host 127.0.0.1
     StrictHostKeyChecking no
