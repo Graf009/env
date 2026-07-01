@@ -104,71 +104,34 @@ yc completion fish > ~/.config/local/yandex.fish
 
 ### VS Code extensions
 
+Extensions are declared in the `Brewfile` as `vscode "..."` entries and installed
+by `brew bundle` (needs the `code` command on `PATH`). To sync the committed list
+with what's currently installed:
+
 ```bash
-EXTENSIONS=(
-  # AI
-  anthropic.claude-code
-
-  # Git
-  eamodio.gitlens
-
-  # Languages
-  golang.go
-  ms-python.python
-  ms-python.debugpy
-  ms-python.vscode-pylance
-  ms-python.vscode-python-envs
-  svelte.svelte-vscode
-
-  # Infrastructure / DevOps
-  redhat.ansible
-  redhat.vscode-yaml
-  hashicorp.hcl
-  docker.docker
-  ms-azuretools.vscode-docker
-  ms-azuretools.vscode-containers
-
-  # Formatters / Linters
-  esbenp.prettier-vscode
-  dbaeumer.vscode-eslint
-  stylelint.vscode-stylelint
-  davidanson.vscode-markdownlint
-
-  # Data formats
-  tamasfe.even-better-toml
-  csstools.postcss
-  jock.svg
-  mechatroner.rainbow-csv
-  inferrinizzard.prettier-sql-vscode
-  xyz.plsql-language
-  mariusschulz.yarn-lock-syntax
-  webben.browserslist
-
-  # Editor UX
-  editorconfig.editorconfig
-  mikestead.dotenv
-  kshetline.ligatures-limited
-  ms-vscode.live-server
-
-  # Markdown
-  yzhang.markdown-all-in-one
-
-  # Spell check
-  streetsidesoftware.code-spell-checker
-  streetsidesoftware.code-spell-checker-russian
-
-  # Theme / Icons
-  rafaelmardojai.vscode-gnome-theme
-  pkief.material-icon-theme
-
-  # Localisation
-  ms-ceintl.vscode-language-pack-ru
-)
-for EXTENSION in "${EXTENSIONS[@]}"; do
-  [[ "$EXTENSION" =~ ^# ]] && continue
-  code --install-extension "$EXTENSION"
-done
+brew bundle dump --vscode --force --describe   # snapshot installed → Brewfile-style
 ```
+
+Then hand-merge the `vscode` lines into the `Brewfile`, preserving its grouping.
+
+### Keeping the Brewfile in sync
+
+`$HOMEBREW_BUNDLE_FILE` points at this repo's `Brewfile` (set in `fish/conf.d/env.fish`),
+so `brew bundle` commands work from any directory. To see how the machine has drifted:
+
+```fish
+brewcheck        # read-only: lists declared-but-missing AND installed-but-undeclared
+```
+
+Reconcile by **hand-editing** the `Brewfile` (keep the sections/comments) — add the
+ad-hoc installs you want to keep, remove or install the rest. For a full snapshot to
+compare against:
+
+```bash
+brew bundle dump --force --describe --file=/tmp/Brewfile.new   # never dump over the curated file
+```
+
+Never run `brew bundle cleanup --force` (uninstalls) without reviewing `brewcheck` first.
 
 ## Structure
 
@@ -190,3 +153,4 @@ done
 | `bin/vvv` | Read-only macOS diagnostics: device management (MDM), background services, privacy permissions, network connections. Run `vvv`, `vvv -v`, `vvv --full` |
 | `fish/functions/bw-ssh.fish` | Load SSH keys from Bitwarden into ssh-agent |
 | `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
+| `fish/functions/brewcheck.fish` | Report Brewfile drift (missing / ad-hoc installed) |

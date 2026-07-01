@@ -1,6 +1,9 @@
 # Console editor
 set -gx EDITOR micro
 
+# Homebrew: default Brewfile so `brew bundle` (and brewcheck) work from any directory
+set -gx HOMEBREW_BUNDLE_FILE ~/project/public/dotfiles/Brewfile
+
 # Ripgrep config (XDG path — matched by install.conf.yaml link ~/.config/ripgreprc)
 set -gx RIPGREP_CONFIG_PATH ~/.config/ripgreprc
 

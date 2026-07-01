@@ -112,3 +112,52 @@ mas "Bitwarden",    id: 1352778147   # primary — prefer over cask above
 mas "Mattermost",   id: 1614666244
 mas "Windows App",  id: 1295203466   # Microsoft Remote Desktop
 mas "Tomato One",   id: 907364780
+
+# --- VS Code extensions (installed by `brew bundle`; needs `code` on PATH) ---
+# AI
+vscode "anthropic.claude-code"
+# Git
+vscode "eamodio.gitlens"
+# Languages
+vscode "golang.go"
+vscode "ms-python.python"
+vscode "ms-python.debugpy"
+vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
+vscode "svelte.svelte-vscode"
+# Infrastructure / DevOps
+vscode "redhat.ansible"
+vscode "redhat.vscode-yaml"
+vscode "hashicorp.hcl"
+vscode "docker.docker"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-azuretools.vscode-containers"
+# Formatters / Linters
+vscode "esbenp.prettier-vscode"
+vscode "dbaeumer.vscode-eslint"
+vscode "stylelint.vscode-stylelint"
+vscode "davidanson.vscode-markdownlint"
+# Data formats
+vscode "tamasfe.even-better-toml"
+vscode "csstools.postcss"
+vscode "jock.svg"
+vscode "mechatroner.rainbow-csv"
+vscode "inferrinizzard.prettier-sql-vscode"
+vscode "xyz.plsql-language"
+vscode "mariusschulz.yarn-lock-syntax"
+vscode "webben.browserslist"
+# Editor UX
+vscode "editorconfig.editorconfig"
+vscode "mikestead.dotenv"
+vscode "kshetline.ligatures-limited"
+vscode "ms-vscode.live-server"
+# Markdown
+vscode "yzhang.markdown-all-in-one"
+# Spell check
+vscode "streetsidesoftware.code-spell-checker"
+vscode "streetsidesoftware.code-spell-checker-russian"
+# Theme / Icons
+vscode "rafaelmardojai.vscode-gnome-theme"
+vscode "pkief.material-icon-theme"
+# Localisation
+vscode "ms-ceintl.vscode-language-pack-ru"
