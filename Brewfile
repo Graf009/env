@@ -4,7 +4,6 @@ tap "homebrew/bundle"
 # --- shell & prompt ---
 brew "fish"
 brew "starship"
-brew "fisher"         # fish plugin manager (also installable via script)
 
 # --- runtime manager ---
 brew "mise"           # node/go/java — replaces node@18, openjdk, go formulae

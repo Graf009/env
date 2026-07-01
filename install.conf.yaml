@@ -43,5 +43,4 @@
     - [./install-brew-stuff.sh, Installing Homebrew]
     - [brew bundle install, Installing packages from Brewfile]
     - [./macos-defaults.sh, Applying macOS defaults]
-    - [fish -c 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher update', Installing fisher plugins]
     - [fish -c 'mise install', Installing mise runtimes]

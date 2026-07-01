@@ -16,8 +16,7 @@ cd dotfiles
 2. `brew bundle install` — install all packages from `Brewfile`
 3. Apply macOS defaults (`macos-defaults.sh`)
 4. Symlink configs via dotbot
-5. Install fish plugins via fisher
-6. Install runtimes via `mise install` (node LTS, Go latest, Java LTS)
+5. Install runtimes via `mise install` (node LTS, Go latest, Java LTS)
 
 ## Post-install
 
@@ -76,8 +75,6 @@ bw-ssh                     # decrypts each key, ssh-add, wipes temp file
 | `SSH key: id_orlov` | Secure Note | Private key file content |
 | `SSH key: id_dc` | Secure Note | Private key file content |
 | `SSH key: id_podeli-bnpl` | Secure Note | Private key file content |
-
-A template for `~/.fish.env` is at `.fish.env.example` in this repo.
 
 ### Claude Code
 
@@ -181,7 +178,6 @@ done
 | `fish/config.fish` | Shell init (mise, starship, atuin, zoxide, fzf) |
 | `fish/conf.d/` | Env vars and abbreviations (auto-sourced) |
 | `fish/graf009/` | Custom fish functions |
-| `fish/fish_plugins` | Fisher plugin manifest |
 | `mise/config.toml` | Runtime versions (node, go, java) |
 | `gitconfig` | Git config with SSH signing and identity switching |
 | `git/allowed_signers` | SSH signing key registry |
@@ -194,4 +190,3 @@ done
 | `bin/vvv` | Read-only macOS diagnostics: device management (MDM), background services, privacy permissions, network connections. Run `vvv`, `vvv -v`, `vvv --full` |
 | `fish/functions/bw-ssh.fish` | Load SSH keys from Bitwarden into ssh-agent |
 | `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
-| `.fish.env.example` | Template for `~/.fish.env` (fill in and place at `~/`) |
