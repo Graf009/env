@@ -6,6 +6,7 @@
 
 
 - create:
+    - ~/bin
     - ~/.config
     - ~/.config/bat
     - ~/Library/Application Support/Code/User
@@ -36,6 +37,7 @@
     ~/.config/mise/config.toml: mise/config.toml
     ~/.config/fish/functions: fish/functions
     ~/.claude/settings.json: claude/settings.json
+    ~/bin/vvv: vvv
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

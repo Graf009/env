@@ -60,3 +60,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows
+
+### Local-only prototype ###
+# vv.sh is the original prototype; the shipped tool is `vvv` (committed).
+/vv.sh
