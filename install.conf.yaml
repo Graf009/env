@@ -37,7 +37,7 @@
     ~/.config/mise/config.toml: mise/config.toml
     ~/.config/fish/functions: fish/functions
     ~/.claude/settings.json: claude/settings.json
-    ~/bin/vvv: vvv
+    ~/bin/vvv: bin/vvv
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
