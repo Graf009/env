@@ -11,7 +11,13 @@ abbr --add e 'code .'
 # Modern unix replacements
 abbr --add l 'eza --all'
 abbr --add ll 'eza --long --all --git'
+abbr --add ls eza
 abbr --add cat bat
+abbr --add dig doggo
+
+# Tool wrappers (interactive-only; keep real binaries available in scripts)
+abbr --add mtr 'sudo mtr'
+abbr --add first-time-ssh 'kitty +kitten ssh'
 
 # pnpm
 abbr --add n 'pnpm '
