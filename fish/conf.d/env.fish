@@ -1,8 +1,13 @@
 # Console editor
 set -gx EDITOR micro
 
-# Homebrew: default Brewfile so `brew bundle` (and brewcheck) work from any directory
-set -gx HOMEBREW_BUNDLE_FILE ~/project/public/dotfiles/Brewfile
+# Homebrew: point `brew bundle` (and brewcheck) at this repo's Brewfile from
+# any directory. Derive the repo root from the ~/bin symlink (-> repo/bin) so
+# it works regardless of where the repo is cloned.
+if test -L ~/bin
+    set -l _repo (path dirname (path resolve ~/bin))
+    test -r $_repo/Brewfile; and set -gx HOMEBREW_BUNDLE_FILE $_repo/Brewfile
+end
 
 # Ripgrep config (XDG path — matched by install.conf.yaml link ~/.config/ripgreprc)
 set -gx RIPGREP_CONFIG_PATH ~/.config/ripgreprc

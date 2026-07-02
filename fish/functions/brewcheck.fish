@@ -1,9 +1,12 @@
 function brewcheck --description 'Show drift between the Brewfile and installed packages (read-only)'
-    # Uses $HOMEBREW_BUNDLE_FILE (set in conf.d/env.fish); fall back to the repo copy.
+    # Uses $HOMEBREW_BUNDLE_FILE (set in conf.d/env.fish); otherwise derive the
+    # repo root from the ~/bin symlink (-> repo/bin).
     set -l bf $HOMEBREW_BUNDLE_FILE
-    test -n "$bf"; or set bf ~/project/public/dotfiles/Brewfile
+    if test -z "$bf"; and test -L ~/bin
+        set bf (path dirname (path resolve ~/bin))/Brewfile
+    end
     if not test -r "$bf"
-        echo "brewcheck: Brewfile not found at $bf"
+        echo "brewcheck: Brewfile not found (set HOMEBREW_BUNDLE_FILE or symlink ~/bin)"
         return 1
     end
 
