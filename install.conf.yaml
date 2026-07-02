@@ -14,6 +14,7 @@
     - ~/.config/pnpm
     - ~/.config/mise
     - ~/.claude
+    - ~/.ssh
 
 - link:
     ~/Library/Application Support/Code/User/settings.json: vscode.json
