@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Fresh-machine setup. Run this ONCE on a new Mac — it does the parts that
+# need an interactive sudo password (installing Homebrew), which cannot run
+# inside dotbot, then hands off to ./install for everything else.
+#
+#   ./bootstrap
+#
+# On an already-set-up machine just run ./install to re-sync configs.
+set -euo pipefail
+
+BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$BASEDIR"
+
+# Cache sudo credentials up front so the Homebrew installer doesn't stall.
+echo "==> Caching sudo credentials (needed to install Homebrew)…"
+sudo -v
+
+# Install Homebrew if missing (runs in this real terminal, so sudo works).
+echo "==> Ensuring Homebrew is installed…"
+./install-brew-stuff.sh
+
+# Put brew on PATH for the rest of this run (Apple Silicon or Intel).
+if [ -x /opt/homebrew/bin/brew ]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [ -x /usr/local/bin/brew ]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+# Hand off to the dotbot install (symlinks, brew bundle, mise runtimes).
+echo "==> Running ./install…"
+exec ./install "$@"

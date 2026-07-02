@@ -41,7 +41,6 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - [./install-brew-stuff.sh, Installing Homebrew]
     - [/bin/bash -lc 'eval "$(/opt/homebrew/bin/brew shellenv)" && brew bundle install', Installing packages from Brewfile]
     - [./macos-defaults.sh, Applying macOS defaults]
     - [fish -c 'mise install', Installing mise runtimes]

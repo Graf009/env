@@ -5,18 +5,24 @@ Packages via Brewfile, runtimes via mise, fish as the only shell.
 
 ## Bootstrap
 
+On a **fresh Mac**, run `./bootstrap` — it handles the steps that need an
+interactive sudo password (installing Homebrew), then runs `./install`:
+
 ```bash
-git clone https://github.com/graf009/dotfiles dotfiles
-cd dotfiles
-./install
+git clone git@github.com:Graf009/env.git env
+cd env
+./bootstrap
 ```
 
-`./install` will:
-1. Install Homebrew (if missing)
+`./bootstrap` will:
+1. Cache sudo, then install Homebrew (if missing) — needs an interactive terminal
+2. Hand off to `./install`
+
+`./install` (also runnable on its own to re-sync an already-set-up machine) will:
+1. Symlink configs via dotbot
 2. `brew bundle install` — install all packages from `Brewfile`
 3. Apply macOS defaults (`macos-defaults.sh`)
-4. Symlink configs via dotbot
-5. Install runtimes via `mise install` (node LTS, Go latest, Java LTS)
+4. Install runtimes via `mise install` (node LTS, Go latest, Java LTS)
 
 ## Post-install
 
