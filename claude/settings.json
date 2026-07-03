@@ -21,6 +21,6 @@
     }
   },
   "effortLevel": "high",
-  "theme": "dark",
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "theme": "dark-ansi"
 }
