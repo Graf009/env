@@ -51,6 +51,7 @@ brew "zoxide"
 brew "lazygit"
 brew "dive"           # Docker image layer analysis
 brew "sqlite"
+brew "p7zip"          # 7-Zip archiver (7z)
 brew "mmctl"          # Mattermost CLI
 brew "atuin"          # shell history with fuzzy search and sync
 brew "maven"          # Java build tool (mise manages JVM runtime)
@@ -76,6 +77,9 @@ cask "dbeaver-community"
 
 # --- Yandex Cloud ---
 cask "yandex-cloud-cli"
+
+# --- browser ---
+cask "yandex"         # Yandex.Browser
 
 # --- productivity ---
 cask "obsidian"
