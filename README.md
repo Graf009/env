@@ -66,10 +66,11 @@ bw login                   # authenticate once
 bw-env                     # pulls KEY=value pairs → ~/.fish.env, then exports
 ```
 
-**Load SSH keys** into `ssh-agent` from Secure Notes named `SSH key: id_graf009` etc.:
+**Load SSH keys** into `ssh-agent` from Bitwarden **SSH-key items** named after
+each key file (e.g. an SSH-key item called `id_graf009`):
 
 ```fish
-bw-ssh                     # saves each key to ~/.ssh/ (+ .pub), then ssh-add
+bw-ssh                     # writes ~/.ssh/<key> (+ .pub) from the item, then ssh-add
 ```
 
 **Vault conventions:**
@@ -77,9 +78,8 @@ bw-ssh                     # saves each key to ~/.ssh/ (+ .pub), then ssh-add
 | Bitwarden item name | Type | Content |
 |---|---|---|
 | `fish.env` | Secure Note | `KEY=value` lines (one per line) |
-| `SSH key: id_graf009` | Secure Note | Private key file content |
-| `SSH key: id_dc` | Secure Note | Private key file content |
-| `SSH key: id_ecom-bnpl` | Secure Note | Private key file content |
+| `id_graf009` | SSH key | private + public key |
+| `id_ecom` | SSH key | private + public key |
 
 ### Claude Code
 

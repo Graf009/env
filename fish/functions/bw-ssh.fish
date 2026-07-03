@@ -1,8 +1,8 @@
-function bw-ssh --description 'Install SSH private keys from Bitwarden into ~/.ssh and ssh-agent'
+function bw-ssh --description 'Install SSH keys from Bitwarden (native SSH-key items) into ~/.ssh and ssh-agent'
     _bw_ensure_unlocked; or return 1
 
-    # Convention: store each private key as a Bitwarden secure note
-    # named exactly "SSH key: <filename>", e.g. "SSH key: id_graf009"
+    # Convention: store each key as a Bitwarden "SSH key" item (type 5) named
+    # exactly after the key file, e.g. an SSH-key item called "id_graf009".
     set -l keys id_graf009 id_ecom
 
     # Ensure ~/.ssh exists with the right permissions.
@@ -10,23 +10,31 @@ function bw-ssh --description 'Install SSH private keys from Bitwarden into ~/.s
     chmod 700 ~/.ssh
 
     for key in $keys
-        set -l content (bw get notes "SSH key: $key" 2>/dev/null)
-        if test -z "$content"
-            echo "⚠  Bitwarden: note 'SSH key: $key' not found — skipping"
+        # Fetch the item once as a single JSON blob (string collect keeps
+        # newlines intact for jq instead of splitting into a list).
+        set -l json (bw get item "$key" 2>/dev/null | string collect)
+        if test -z "$json"
+            echo "⚠  Bitwarden: item '$key' not found — skipping"
             continue
         end
 
-        # Save the private key to ~/.ssh (persisted for use as IdentityFile).
+        set -l priv (printf '%s' $json | jq -r '.sshKey.privateKey // empty')
+        set -l pub (printf '%s' $json | jq -r '.sshKey.publicKey // empty')
+
+        if test -z "$priv"
+            echo "⚠  '$key' is not an SSH-key item (no private key) — skipping"
+            continue
+        end
+
+        # Save the private key (persisted for use as IdentityFile).
         set -l dest ~/.ssh/$key
-        printf '%s\n' $content >$dest
+        printf '%s\n' $priv >$dest
         chmod 600 $dest
 
-        # Derive the public key — needed so IdentitiesOnly can match the key.
-        if ssh-keygen -y -f $dest >$dest.pub 2>/dev/null
+        # Save the public key from the item (needed for IdentitiesOnly matching).
+        if test -n "$pub"
+            printf '%s\n' $pub >$dest.pub
             chmod 644 $dest.pub
-        else
-            rm -f $dest.pub
-            echo "⚠  Could not derive $key.pub (passphrase-protected?)"
         end
 
         # Also load into the running ssh-agent for this session.
