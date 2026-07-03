@@ -38,15 +38,14 @@ chsh -s /opt/homebrew/bin/fish
 Add your SSH public key to GitHub as a **signing key** (Settings → SSH keys → type: Signing):
 
 ```bash
-cat ~/.ssh/id_orlov.pub   # personal / public projects
-cat ~/.ssh/id_dc.pub      # work (oorlov@alfabank.ru)
+cat ~/.ssh/id_graf009.pub   # personal / public projects
 ```
 
 ### SSH key permissions
 
 ```bash
 chmod 700 ~/.ssh
-chmod 600 ~/.ssh/id_orlov ~/.ssh/id_dc ~/.ssh/id_podeli-bnpl
+chmod 600 ~/.ssh/id_graf009 ~/.ssh/id_ecom-bnpl
 chmod 644 ~/.ssh/*.pub
 ```
 
@@ -67,10 +66,10 @@ bw login                   # authenticate once
 bw-env                     # pulls KEY=value pairs → ~/.fish.env, then exports
 ```
 
-**Load SSH keys** into `ssh-agent` from Secure Notes named `SSH key: id_orlov` etc.:
+**Load SSH keys** into `ssh-agent` from Secure Notes named `SSH key: id_graf009` etc.:
 
 ```fish
-bw-ssh                     # decrypts each key, ssh-add, wipes temp file
+bw-ssh                     # saves each key to ~/.ssh/ (+ .pub), then ssh-add
 ```
 
 **Vault conventions:**
@@ -78,9 +77,9 @@ bw-ssh                     # decrypts each key, ssh-add, wipes temp file
 | Bitwarden item name | Type | Content |
 |---|---|---|
 | `fish.env` | Secure Note | `KEY=value` lines (one per line) |
-| `SSH key: id_orlov` | Secure Note | Private key file content |
+| `SSH key: id_graf009` | Secure Note | Private key file content |
 | `SSH key: id_dc` | Secure Note | Private key file content |
-| `SSH key: id_podeli-bnpl` | Secure Note | Private key file content |
+| `SSH key: id_ecom-bnpl` | Secure Note | Private key file content |
 
 ### Claude Code
 

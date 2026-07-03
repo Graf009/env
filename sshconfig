@@ -4,17 +4,18 @@ Host *
     ServerAliveInterval 3
     GSSAPIAuthentication no
     TCPKeepAlive yes
-    IdentityFile ~/.ssh/id_orlov
+    User graf009
+    IdentityFile ~/.ssh/id_graf009
 
 Host github.com
     HostName github.com
     User git
-    IdentityFile ~/.ssh/id_orlov
+    IdentityFile ~/.ssh/id_graf009
     IdentitiesOnly yes
 
 Host *.podeli.ru *.core-infra.ru
     User oleg_orlov
-    IdentityFile ~/.ssh/id_podeli
+    IdentityFile ~/.ssh/id_ecom
     IdentitiesOnly yes
 
 Host 127.0.0.1

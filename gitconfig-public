@@ -1,4 +1,4 @@
 [user]
     name       = Oleg Orlov
     email      = mail@orlovoleg.com
-    signingkey = ~/.ssh/id_orlov
+    signingkey = ~/.ssh/id_graf009

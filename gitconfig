@@ -1,6 +1,6 @@
 # identity — loaded by gitdir match; podeli is also the fallback
-[includeIf "gitdir:~/project/podeli/"]
-    path = .gitconfig-podeli
+[includeIf "gitdir:~/project/ecom/"]
+    path = .gitconfig-ecom
 [includeIf "gitdir:~/project/public/"]
     path = .gitconfig-public
 [includeIf "gitdir:~/project/tmp/"]
@@ -8,8 +8,6 @@
 
 [user]
     name = Oleg Orlov
-    email = o.orlov@podeli.ru
-    signingkey = ~/.ssh/id_dc
 
 [core]
     autocrlf = input
