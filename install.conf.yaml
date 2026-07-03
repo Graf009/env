@@ -1,6 +1,10 @@
 - defaults:
     link:
         relink: true
+    shell:
+        stdin: true    # allow interactive prompts (e.g. a cask asking for a password)
+        stdout: true   # stream command output to the console (brew bundle progress)
+        stderr: true   # show errors instead of swallowing them
 
 - clean: ['~']
 
