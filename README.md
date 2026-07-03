@@ -85,12 +85,15 @@ bw-ssh                     # writes ~/.ssh/<key> (+ .pub) from the item, then ss
 
 Settings are symlinked from `claude/settings.json` → `~/.claude/settings.json` automatically by `./install`.
 
-Install plugins on first run (see `claude/plugins.md` for full list):
+`settings.json` already declares the `omc` marketplace and enables the plugins
+below, so they load on first launch. To add/manage them manually, use `/plugin`
+in Claude Code (see `claude/plugins.md` for the full list):
 
 ```
-/install-plugin oh-my-claudecode   # from omc marketplace
-/install-plugin claude-code-setup
-/install-plugin claude-md-management
+/plugin marketplace add Yeachan-Heo/oh-my-claudecode   # registers the "omc" marketplace
+/plugin install oh-my-claudecode@omc
+/plugin install claude-code-setup@claude-plugins-official
+/plugin install claude-md-management@claude-plugins-official
 ```
 
 Then initialise oh-my-claudecode:
