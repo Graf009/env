@@ -70,6 +70,7 @@ cask "font-sauce-code-pro-nerd-font"
 cask "kitty"
 cask "visual-studio-code"
 cask "claude-code"    # Terminal-based AI coding assistant
+cask "claude"         # Claude desktop app (GUI)
 
 # --- infra GUI ---
 cask "headlamp"       # CNCF k8s GUI, replaces Lens
