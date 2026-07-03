@@ -1,7 +1,3 @@
-# --- taps ---
-tap "homebrew/bundle"
-tap "hashicorp/tap"   # terraform (removed from homebrew-core, BUSL license)
-
 # --- shell & prompt ---
 brew "fish"
 brew "starship"
@@ -40,7 +36,6 @@ brew "helm"
 brew "k9s"
 brew "kubectx"        # provides kubectx + kubens
 brew "stern"          # multi-pod log tailing
-brew "hashicorp/tap/terraform"   # IaC for Yandex Cloud and others
 brew "ansible"        # configuration management / automation
 brew "ansible-lint"   # Ansible linter (work requirement)
 brew "asimov"         # exclude node_modules/.git from Time Machine
@@ -86,14 +81,12 @@ cask "obsidian"
 
 # --- communication ---
 cask "telegram"
-cask "zoom"
 
 # --- media ---
 cask "spotify"
 cask "vlc"
 
 # --- security / privacy ---
-cask "bitwarden"      # fallback; prefer App Store version (mas below)
 brew "bitwarden-cli"  # CLI для secrets management (bw-ssh, bw-env)
 cask "cryptomator"
 
@@ -107,7 +100,7 @@ cask "raspberry-pi-imager"
 cask "android-platform-tools"
 
 # --- crypto ---
-cask "ledger-wallet"
+# cask "ledger-wallet"
 
 # --- App Store ---
 mas "Bitwarden",    id: 1352778147   # primary — prefer over cask above
