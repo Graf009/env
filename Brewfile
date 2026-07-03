@@ -6,13 +6,13 @@ brew "starship"
 brew "mise"           # node/go/java — replaces node@18, openjdk, go formulae
 
 # --- modern unix replacements ---
-brew "eza"            # replaces exa (unmaintained)
+brew "eza"            # replaces exa
 brew "bat"
 brew "ripgrep"
 brew "fd"
 brew "git-delta"
 brew "xh"             # replaces httpie (faster, Rust, compatible syntax)
-brew "doggo"          # replaces dog (unmaintained)
+brew "doggo"          # replaces dog 
 
 # --- git & signing ---
 brew "git"
@@ -37,7 +37,7 @@ brew "k9s"
 brew "kubectx"        # provides kubectx + kubens
 brew "stern"          # multi-pod log tailing
 brew "ansible"        # configuration management / automation
-brew "ansible-lint"   # Ansible linter (work requirement)
+brew "ansible-lint"   # Ansible linter
 brew "asimov"         # exclude node_modules/.git from Time Machine
 
 # --- dev tooling ---
@@ -58,6 +58,9 @@ brew "maven"          # Java build tool (mise manages JVM runtime)
 # --- security ---
 brew "openssl@3"
 
+# --- tunneling ---
+brew "cloudflared"    # Cloudflare Tunnel client
+
 # --- fonts ---
 cask "font-martian-mono"
 cask "font-sauce-code-pro-nerd-font"
@@ -69,9 +72,6 @@ cask "visual-studio-code"
 # --- infra GUI ---
 cask "headlamp"       # CNCF k8s GUI, replaces Lens
 cask "dbeaver-community"
-
-# --- tunneling ---
-cask "cloudflared"    # replaces ngrok
 
 # --- Yandex Cloud ---
 cask "yandex-cloud-cli"
