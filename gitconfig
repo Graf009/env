@@ -1,4 +1,4 @@
-# identity — loaded by gitdir match; podeli is also the fallback
+# identity — loaded by gitdir match
 [includeIf "gitdir:~/project/ecom/"]
     path = .gitconfig-ecom
 [includeIf "gitdir:~/project/public/"]

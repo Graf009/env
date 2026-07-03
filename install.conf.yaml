@@ -32,7 +32,7 @@
     ~/.config/kitty: kitty
     ~/.config/starship.toml: starship.toml
     ~/.editorconfig: editorconfig
-    ~/.gitconfig-podeli: gitconfig-podeli
+    ~/.gitconfig-ecom: gitconfig-ecom
     ~/.gitconfig-public: gitconfig-public
     ~/.gitconfig: gitconfig
     ~/.config/ripgreprc: ripgreprc
