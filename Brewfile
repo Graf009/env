@@ -100,7 +100,7 @@ cask "raspberry-pi-imager"
 cask "android-platform-tools"
 
 # --- crypto ---
-# cask "ledger-wallet"
+cask "ledger-wallet"
 
 # --- App Store ---
 mas "Bitwarden",    id: 1352778147   # primary — prefer over cask above
