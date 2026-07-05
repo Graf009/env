@@ -102,6 +102,13 @@ Then initialise oh-my-claudecode:
 setup omc
 ```
 
+### Manual software
+
+Some apps aren't in Homebrew or the App Store, so `brew bundle` can't install
+them — they need a manual `.dmg` download. The current list (with download links
+and steps) lives in [`docs/manual-software.md`](docs/manual-software.md). After
+`./install`, walk that list and install what you need.
+
 ### Yandex Cloud completion
 
 After `yc init`, save the completion file outside the repo:
@@ -146,6 +153,8 @@ Never run `brew bundle cleanup --force` (uninstalls) without reviewing `brewchec
 | Path | Purpose |
 |---|---|
 | `Brewfile` | All packages, casks, and App Store apps |
+| `docs/software.md` | Reference for every tool in the `Brewfile`, by category |
+| `docs/manual-software.md` | Apps that need manual install (no cask / not on App Store) |
 | `fish/config.fish` | Shell init (mise, starship, atuin, zoxide, fzf) |
 | `fish/conf.d/` | Env vars and abbreviations (auto-sourced) |
 | `fish/graf009/` | Custom fish functions |

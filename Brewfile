@@ -104,6 +104,7 @@ cask "arduino-ide"
 cask "betaflight-configurator"
 cask "raspberry-pi-imager"
 cask "android-platform-tools"
+cask "bambu-studio"    # 3D printer slicer (Bambu Lab)
 
 # --- crypto ---
 cask "ledger-wallet"
