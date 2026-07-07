@@ -171,3 +171,4 @@ Never run `brew bundle cleanup --force` (uninstalls) without reviewing `brewchec
 | `fish/functions/bw-ssh.fish` | Load SSH keys from Bitwarden into ssh-agent |
 | `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
 | `fish/functions/brewcheck.fish` | Report Brewfile drift (missing / ad-hoc installed) |
+| `fish/functions/flushdns.fish` | Flush the macOS DNS cache (`dscacheutil` + `mDNSResponder`) |
