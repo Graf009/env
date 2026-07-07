@@ -169,6 +169,20 @@ Notes:
 - `no_proxy`/`NO_PROXY` is set to `localhost,127.0.0.1,::1` so loopback (and
   the path to a local SOCKS listener) is never proxied.
 
+The GUI Claude desktop app ignores these env vars (Chromium reads the OS
+network settings, not `http_proxy`). Use `claude-proxy` to launch it with the
+proxy applied via the `--proxy-server` flag instead:
+
+```fish
+claude-proxy                 # launches a new Claude.app instance through $PROXY_URI
+claude-proxy --new-window …  # extra args are passed through to Claude/Chromium
+```
+
+Fully quit an already-running Claude first — Chromium only reads
+`--proxy-server` at startup and macOS reuses a live instance (the function
+warns when it detects one). A credentialed `$PROXY_URI` (`user:pass@`) is
+visible in `ps aux` while Claude runs — unavoidable with the flag mechanism.
+
 ### VS Code extensions
 
 Extensions are declared in the `Brewfile` as `vscode "..."` entries and installed
@@ -226,4 +240,5 @@ Never run `brew bundle cleanup --force` (uninstalls) without reviewing `brewchec
 | `fish/functions/flushdns.fish` | Flush the macOS DNS cache (`dscacheutil` + `mDNSResponder`) |
 | `fish/functions/dnssync.fish` | Apply declarative split-DNS routes to `/etc/resolver` (managed, fail-closed) |
 | `fish/functions/proxy.fish` | Toggle proxy env vars for the current session from `$PROXY_URI` (`on`/`off`/`status`) |
+| `fish/functions/claude-proxy.fish` | Launch Claude.app through the proxy in `$PROXY_URI` (new GUI instance) |
 | `dns-routes.conf.example` | Template for `dnssync`; real config lives at `~/.config/local/dns-routes.conf` (not committed) |
