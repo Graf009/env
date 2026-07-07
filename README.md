@@ -148,6 +148,27 @@ client / Tailscale / dnsmasq, and it refuses to delete anything when the config
 is missing or empty. Writing to `/etc/resolver` needs sudo (it will prompt).
 If a VPN client already manages a domain, leave that domain out of the config.
 
+### Proxy toggle
+
+`proxy` turns proxy usage on/off for the **current shell session** from the
+endpoint in `$PROXY_URI` (e.g. `http://127.0.0.1:12334`, provided by your
+private config — `~/.config/local` or the `bw-env` note):
+
+```fish
+proxy on       # export {http,https,all}_proxy (+ UPPERCASE) = $PROXY_URI, plus no_proxy for loopback
+proxy off      # erase them all
+proxy status   # on / off-but-ready / PROXY_URI-unset (bare `proxy` = status)
+```
+
+Notes:
+- **Session-only.** It mutates this shell's env (inherited by newly spawned
+  children); **already-running processes won't pick up the change**.
+- **SOCKS caveat.** curl, git and pip honor a `socks5://` value in these
+  variables; `wget` and native `npm`/`node` do **not** understand SOCKS and
+  won't be proxied. `all_proxy`/`ALL_PROXY` is the reliable pair for SOCKS.
+- `no_proxy`/`NO_PROXY` is set to `localhost,127.0.0.1,::1` so loopback (and
+  the path to a local SOCKS listener) is never proxied.
+
 ### VS Code extensions
 
 Extensions are declared in the `Brewfile` as `vscode "..."` entries and installed
@@ -204,4 +225,5 @@ Never run `brew bundle cleanup --force` (uninstalls) without reviewing `brewchec
 | `fish/functions/brewcheck.fish` | Report Brewfile drift (missing / ad-hoc installed) |
 | `fish/functions/flushdns.fish` | Flush the macOS DNS cache (`dscacheutil` + `mDNSResponder`) |
 | `fish/functions/dnssync.fish` | Apply declarative split-DNS routes to `/etc/resolver` (managed, fail-closed) |
+| `fish/functions/proxy.fish` | Toggle proxy env vars for the current session from `$PROXY_URI` (`on`/`off`/`status`) |
 | `dns-routes.conf.example` | Template for `dnssync`; real config lives at `~/.config/local/dns-routes.conf` (not committed) |

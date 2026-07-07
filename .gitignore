@@ -1,5 +1,5 @@
-# Local-only, never committed
-test/          # verification scripts — run locally, not tracked
+# Local-only verification scripts — run locally, never tracked
+test/
 
 # Created by https://www.toptal.com/developers/gitignore/api/macos,windows
 # Edit at https://www.toptal.com/developers/gitignore?templates=macos,windows
