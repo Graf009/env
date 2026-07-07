@@ -1,0 +1,23 @@
+# dns-routes.conf — declarative split-DNS routes for `dnssync` (macOS).
+#
+# Copy this file to ~/.config/local/dns-routes.conf and edit it there.
+#
+# Format — one route per line:
+#   <domain> <nameserver> [nameserver...] [port=NN] [search_order=NN]
+#
+#   - <domain>      the DNS suffix to route (e.g. corp.example). No slashes.
+#   - <nameserver>  one or more IPv4/IPv6 literals (not hostnames).
+#   - port=NN       optional resolver port (default 53).
+#   - search_order  optional resolver priority (lower wins).
+#
+# '#' comments (whole-line or trailing) and blank lines are ignored.
+# Apply with `dnssync` (add/update + report stale) or `dnssync --prune`
+# (also delete routes you removed here). `dnssync` only ever manages files
+# it created; VPN/Tailscale/dnsmasq resolvers are left untouched.
+#
+# Single-writer rule: if a corporate VPN client already manages a domain in
+# /etc/resolver, leave that domain OUT of this file — dnssync will refuse to
+# overwrite a resolver it does not own.
+
+# corp.example        10.0.0.53 10.0.0.54
+# internal.acme       10.10.0.1 search_order=100

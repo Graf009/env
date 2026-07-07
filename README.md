@@ -117,6 +117,37 @@ After `yc init`, save the completion file outside the repo:
 yc completion fish > ~/.config/local/yandex.fish
 ```
 
+### Split DNS (per-domain resolvers)
+
+`dnssync` routes specific domains to specific nameservers via macOS
+`/etc/resolver/<domain>` files — useful for VPN / corporate internal DNS
+without changing the system-wide resolver.
+
+The route list is **declarative** and lives **outside this public repo** at
+`~/.config/local/dns-routes.conf` (internal domains and resolver IPs are
+sensitive infra, so only the [`dns-routes.conf.example`](dns-routes.conf.example)
+template is committed):
+
+```bash
+cp dns-routes.conf.example ~/.config/local/dns-routes.conf
+$EDITOR ~/.config/local/dns-routes.conf   # one route per line: <domain> <nameserver...>
+```
+
+Apply and inspect:
+
+```fish
+dnssync              # apply adds/updates, report stale routes (no deletions)
+dnssync --dry-run    # preview changes, touch nothing, no sudo
+dnssync --prune      # also delete routes you removed from the config
+dnssync --status     # show scutil --dns resolvers + dnssync-managed files
+```
+
+`dnssync` is **fail-closed and marker-scoped**: it only ever touches files it
+created (first line `# managed-by: dnssync`), never a resolver owned by a VPN
+client / Tailscale / dnsmasq, and it refuses to delete anything when the config
+is missing or empty. Writing to `/etc/resolver` needs sudo (it will prompt).
+If a VPN client already manages a domain, leave that domain out of the config.
+
 ### VS Code extensions
 
 Extensions are declared in the `Brewfile` as `vscode "..."` entries and installed
@@ -172,3 +203,5 @@ Never run `brew bundle cleanup --force` (uninstalls) without reviewing `brewchec
 | `fish/functions/bw-env.fish` | Load env vars from Bitwarden into `~/.fish.env` |
 | `fish/functions/brewcheck.fish` | Report Brewfile drift (missing / ad-hoc installed) |
 | `fish/functions/flushdns.fish` | Flush the macOS DNS cache (`dscacheutil` + `mDNSResponder`) |
+| `fish/functions/dnssync.fish` | Apply declarative split-DNS routes to `/etc/resolver` (managed, fail-closed) |
+| `dns-routes.conf.example` | Template for `dnssync`; real config lives at `~/.config/local/dns-routes.conf` (not committed) |
