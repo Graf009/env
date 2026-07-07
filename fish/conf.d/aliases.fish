@@ -8,6 +8,9 @@ abbr --add g git
 # Editor
 abbr --add e 'code .'
 
+# Claude Code
+abbr --add cc 'claude --dangerously-skip-permissions'
+
 # Modern unix replacements
 abbr --add l 'eza --all'
 abbr --add ll 'eza --long --all --git'
