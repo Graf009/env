@@ -213,5 +213,6 @@
     "workbench.editor.empty.hint": "hidden",
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
-    "workbench.statusBar.visible": true
+    "workbench.statusBar.visible": true,
+    "git.autofetch": true
 }
