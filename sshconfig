@@ -11,7 +11,7 @@ Host github.com
     IdentityFile ~/.ssh/id_graf009
     IdentitiesOnly yes
 
-Host *.podeli.ru *.core-infra.ru
+Host *.podeli.ru *.core-infra.ru *.internal
     User oleg_orlov
     IdentityFile ~/.ssh/id_ecom
     IdentitiesOnly yes
