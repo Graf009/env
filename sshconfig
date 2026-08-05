@@ -4,8 +4,6 @@ Host *
     ServerAliveInterval 3
     GSSAPIAuthentication no
     TCPKeepAlive yes
-    User graf009
-    IdentityFile ~/.ssh/id_graf009
 
 Host github.com
     HostName github.com
@@ -21,3 +19,8 @@ Host *.podeli.ru *.core-infra.ru
 Host 127.0.0.1
     StrictHostKeyChecking no
     UserKnownHostsFile /dev/null
+
+Host *
+    User graf009
+    IdentityFile ~/.ssh/id_graf009
+    IdentitiesOnly yes
